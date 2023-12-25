@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ToDo List</title>
+
+  <script src="tre.js"></script>
+  <link href="ayu.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="jjj">
+    <h1>TO DO LIST</h1>
+        <div id="add">
+            <form>
+            <input type="text" value="Завдання" name="" id="txt1">
+            <input type="button" value="+" onclick="butt();">
+            </form>
+        </div>
+    </div>
+<div class="p"><i><h2>TASKS</h2></i></div>
+
+</body>
+</html>
