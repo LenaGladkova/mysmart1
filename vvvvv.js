@@ -17,6 +17,9 @@ function renderUserTable() {
         cell4.innerHTML = '<button onclick="editUser(' + i + ')">Редагувати</button> ' +
                           '<button onclick="deleteUser(' + i + ')">Видалити</button>';
     }
+
+    // Вывод данных в консоль
+    console.log("Зарегистрированные пользователи:", users);
 }
 
 function addOrUpdateUser() {
@@ -34,8 +37,7 @@ function addOrUpdateUser() {
     if (index === -1) {
         users.push(user);
     } else {
-   
-        users[index] = user;
+                users[index] = user;
     }
 
     renderUserTable();
@@ -64,4 +66,5 @@ function findUserIndex(username) {
     }
     return -1;
 }
+
 renderUserTable();
