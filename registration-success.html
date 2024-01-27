@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish list</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="success-container">
+        <h2>Ваш акаунт!</h2>
+        <div id="userData"></div>
+    </div>
+    <div class="questions-container">
+        <h2>Заполни свой Wish list</h2>
+
+        <div>
+            <p><strong>Вопрос 1:</strong> Как вас зовут?(одно слово)</p>
+            <input type="text" id="answer1" required>
+        </div>
+
+        <div>
+            <p><strong>Вопрос 2:</strong> Ваш возраст?(число)</p>
+            <input type="text" id="answer2" required>
+        </div>
+        <div>
+            <p><strong>Вопрос 3:</strong> Ваша професия мечты?</p>
+            <input type="text" id="answer3" required>
+        </div>
+        <div>
+        <button onclick="generateText()">Готово!</button>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="display-data.js"></script>
+
+</body>
+</html>
