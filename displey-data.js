@@ -1,16 +1,17 @@
-var urlParams = new URLSearchParams(window.location.search);
-var userDataDiv = document.getElementById('userData');
+document.addEventListener("DOMContentLoaded", function() {
+    var userDataDiv = document.getElementById('userData');
 
-if (urlParams.has('username') && urlParams.has('email') && urlParams.has('password')) {
-    var username = urlParams.get('username');
-    var email = urlParams.get('email');
-    var password = urlParams.get('password');
+    var storedUsername = localStorage.getItem('username');
+    var storedEmail = localStorage.getItem('email');
+    var storedPassword = localStorage.getItem('password');
 
-    userDataDiv.innerHTML = `
-        <p><strong>Имя:</strong> ${username}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Пароль:</strong> ${password}</p>
-    `;
-} else {
-    userDataDiv.innerHTML = '<p>Data not found.</p>';
-}
+    if (storedUsername && storedEmail && storedPassword) {
+        userDataDiv.innerHTML = `
+            <p><strong>Имя:</strong> ${storedUsername}</p>
+            <p><strong>Email:</strong> ${storedEmail}</p>
+            <p><strong>Пароль:</strong> ${storedPassword}</p>
+        `;
+    } else {
+        userDataDiv.innerHTML = '<p>Данные не найдены.</p>';
+    }
+});
