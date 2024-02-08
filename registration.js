@@ -8,16 +8,10 @@ function submitForm() {
         alert("Passwords do not match!");
         return false;
     }
+    localStorage.setItem('username', username);
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
 
-    var userData = {
-        username: username,
-        email: email,
-        password: password
-    };
-
-    var queryParams = Object.entries(userData).map(([key, value]) => key + '=' + encodeURIComponent(value)).join('&');
-
-    window.location.href = "registration-success.html?" + queryParams;
-
+    window.location.href = "registration-success.html";
     return false;
 }
